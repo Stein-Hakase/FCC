@@ -1,9 +1,11 @@
 body{
+    background-color: #F0F2F5;
     padding: 0;
     margin: 0;
 }
 .header{
     height: 100vh;
+     position: relative;
     
 }
 .header-nav{
@@ -14,6 +16,7 @@ body{
 
 }
 .nav-bar{
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,10 +51,13 @@ body{
 /* header slider start here */
 .header-slider{
     height:82.5%;
+    width: 80%;
     position: relative;
     max-width:  85%;
     margin: 1rem auto;
+    border-radius: 20px ;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.562);
+
 }
 .slider-img{
    position: absolute;
@@ -61,6 +67,8 @@ body{
    left: 0;
    bottom: 0;
    width: 100%;
+   border-radius: 20px;
+
 
 }
 .btns{
@@ -75,12 +83,12 @@ body{
     align-items: center;
 }
 .slider-btn{
+
     width: 3.5rem;
+    text-decoration: none;
     height: 4rem;
-    border: none;
     font-size: 4rem;
     color: white;
-    background: none;
     text-align: center;
     
 }
@@ -89,4 +97,31 @@ body{
     background-color: white;
     padding: .3rem 1rem;
     border-radius: 0 7px 7px 0;
+}
+/* About me section here */
+
+.about{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.562);
+
+
+
+}
+.about-mypic{
+    margin: 1rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+
+
+}
+.about-text{
+    width: 60%;
+    text-align: center;
 }
