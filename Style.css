@@ -125,6 +125,17 @@ body{
     width: 60%;
     text-align: center;
 }
+.contact{
+    margin: 1rem auto;
+    background-color: teal;
+
+}
+.contact-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 /* Footer start here */
 footer{
