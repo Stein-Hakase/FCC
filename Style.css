@@ -123,6 +123,7 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+
     background-color: white;
     border-radius: 20px;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.562);
+    
 
 
 
@@ -138,18 +139,45 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+
 .about-text{
     width: 60%;
     text-align: center;
-}
-.contact{
-    margin: 1rem auto;
-    background-color: rgb(3, 180, 180);
 
 }
+.about-title{
+    font-size: 2rem;
+    font-weight: bolder;
+
+}
+
+/* contact section start here */
+.contact{
+    margin: 1rem auto;
+    
+
+}
+
 .contact-list{
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    list-style:  none;
+    background-color: yellow;
+    box-sizing: border-box;
+
+
 }
+
+.contact-item>i{
+    color: #0F2027;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+.contact-item>span{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    
+}
+
 
 /* Footer start here */
 footer{
@@ -161,7 +189,11 @@ footer{
    display: flex;
    justify-content: space-around;
    align-items: center;
-   padding: 3rem 1rem;
+}
+.footer-title{
+ color: white;
+ font-size: 2.5rem;
+ font-weight: bolder;
 }
 .location{
     display: flex;
@@ -171,15 +203,16 @@ footer{
     flex-shrink: 1;
 }
 .footer-text{
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
+    font-size: 2rem;
+    padding-top: 1rem;
+    color:  rgb(3, 180, 180);
 }
 .links{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-shrink: 2;
+    flex-shrink: 3;
 }
 .footer-list{
     width: 100%;
@@ -189,10 +222,14 @@ footer{
     list-style: none;
 }
 .footer-item{
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+  font-size: 5rem;
+  padding: 0 2rem;
 }
 .footer-link{
     text-decoration: none;
-    
+    color: turquoise;    
+}
+.footer-link:hover{
+    color: yellow;
+
 }
