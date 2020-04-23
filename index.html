@@ -36,8 +36,8 @@
                         <img src="" alt="" class="slider-img">
                     </div>
                     <div class="btns">
-                        <a href="#"class="slider-btn" onclick="">&#10094;</a>
-                        <a href="#"class="slider-btn" onclick="">&#10095;</a>
+                        <a class="slider-btn" onclick=nextSlide(-1)>&#10094;</a>
+                        <a class="slider-btn" onclick=nextSlide(+1)>&#10095;</a>
                     </div>
            </div>
         <!-- Silde div Finish here -->
@@ -91,6 +91,26 @@
         </div>
     </footer>
     <!-- Footer Finish Here -->
-    
+    <script>
+        var track = document.getElementsByClassName("slider")
+        var l=track.length
+        var index=0
+        show(index)
+        function nextSlide(n) {
+            index+= n
+            if (index> 2) {index = 0}
+            if (index < 0) {index= 2}
+            console.log(index)
+           show(index);
+            }
+        function show(c){         
+            for (let i = 0; i < l; i++) {
+                
+             track[i].style.display = "none"; 
+          }
+             track[c].style.display = "block";  
+        }
+
+    </script>
 </body>
 </html>
