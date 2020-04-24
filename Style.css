@@ -150,10 +150,9 @@ body{
     margin: 1.5rem auto;
     padding: 0 2rem;
     color: black;
-    font-family:  Helvetica ,Georgia ;
-    line-height: 3rem;
-    font-weight: bolder;
-    
+    font-family: Arial;
+    font-size: 1.2rem;
+    line-height: 1.5rem;    
 
 }
 .about-title{
