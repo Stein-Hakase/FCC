@@ -98,7 +98,7 @@ body{
     align-items: center;
 }
 .slider-btn{
-
+    
     width: 3.5rem;
     text-decoration: none;
     height: 4rem;
@@ -113,6 +113,29 @@ body{
     background-color: rgba(255, 255, 255, 0.5);
     padding: .3rem 1rem;
     border-radius: 0 7px 7px 0;
+}
+.pp-btn{
+    width: 100%;
+    z-index: 15;
+    position: absolute;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.ppbtn{
+    width: 10%;
+    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0.466);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .5rem;
 }
 /* About me section here */
 

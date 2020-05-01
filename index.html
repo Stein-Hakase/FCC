@@ -40,10 +40,21 @@
                         <div class="slider-img"><img src="./images/2109958.jpg" alt="" class="img"></div>
                     </div>
                     <div class="btns">
-                        <a class="slider-btn" onclick=nextSlide(-1) style="cursor: pointer;">&#10094;</a>
-                        <a class="slider-btn" onclick=nextSlide(+1) style="cursor: pointer;">&#10095;</a>
+                        <a class="slider-btn" id="sliderBtn" onclick=nextSlide(-1) style="cursor: pointer;">&#10094;</a>
+                        <a class="slider-btn" id="sliderBtn" onclick=nextSlide(+1) style="cursor: pointer;">&#10095;</a>
                     </div>
-           </div>
+                    <div class="pp-btn">
+                            <div class="ppbtn">
+                                <a   onclick=play() style="cursor: pointer;">&#9658;</a>
+                                <span>|</span>
+                                <a   onclick=stop() style="cursor: pointer;">&#10074;&#10074;</a>
+        
+                            </div>
+                     </div>
+                  </div>
+                  
+
+               
         <!-- Silde div Finish here -->
  
     </header>
@@ -117,10 +128,10 @@
         var index=0
         show(index)
         function nextSlide(n) {
+           
             index+= n
             if (index> 2) {index = 0}
             if (index < 0) {index= 2}
-            console.log(index)
            show(index);
             }
         function show(c){         
@@ -130,6 +141,41 @@
           }
              track[c].style.display = "block";  
         }
+//  Binding keyboard to image carousel
+
+function handleKeyboardNav(e) {
+        if (!e) e = window.event;
+        var kc = e.keyCode;
+        if (kc == 37) nextSlide(-1);
+        if (kc == 39) nextSlide(+1);
+    }
+
+    function bindKeyDownListener() {
+        if (document.addEventListener)
+            document.addEventListener("keydown", handleKeyboardNav, false);
+        else if (document.attachEvent)
+            el.attachEvent("onkeydown", handleKeyboardNav);
+    }
+    bindKeyDownListener();
+    // Making  Auto play/stop image
+    function playStop(){
+            
+            if (pause===false)
+            {  
+              nextSlide(+1)
+              setTimeout(playStop, 2200)
+              
+            }else return
+    }
+     var pause=false
+     playStop()
+     function stop (){
+         pause=true
+     }
+     function play(){
+         pause=false
+         playStop()
+     }
 
     </script>
 </body>
