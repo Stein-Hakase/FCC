@@ -4,13 +4,8 @@ body{
     padding: 0;
     margin: 0;
 }
-.header{
-    height: 100vh;
-    position: relative;
-    
-}
+
 .header-nav{
-    height: 12%;
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -18,7 +13,6 @@ body{
 
 }
 .nav-bar{
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,6 +32,7 @@ body{
 
 }
 .nav-link{
+    text-align: center;
     text-decoration: none;
     color: rgb(3, 180, 180);
     font-size: 1.2rem;
@@ -60,28 +55,33 @@ body{
 
 /* header slider start here */
 .header-slider{
-    height:82.5%;
+    height: 80vh;
     width: 80%;
     position: relative;
-    max-width:  85%;
+   
     margin: 1rem auto;
     border-radius: 20px ;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.562);
 
 }
 .slider-img{
-  
-   position: absolute;
    height: 100%;
-   top: 0;
-   right: 0;
-   left: 0;
-   bottom: 0;
    width: 100%;
    border-radius: 20px;
-   z-index: 1;
+   position: absolute;
+   border-radius: 20px ;
+   left: 0;
+   top: 0;
+}
 
-
+.img{
+ border-radius: 20px ;
+ height: 100%;
+ width: 100%;
+ display: block;
+ float: left;
+ width: 100%;
+ border: 0;
 }
 .btns{
     z-index: 10;
@@ -126,6 +126,7 @@ body{
     background-image: url(./images/brown-wooden-wall-with-hole-3652419.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
     
 }
 
@@ -165,8 +166,7 @@ body{
 
 /* contact section start here */
 .contact{
-    margin: 1rem auto;
-    
+    margin: 1rem auto;   
 
 }
 
@@ -248,4 +248,115 @@ footer{
 .footer-link:hover{
     color: yellow;
 
+}
+@media only screen and (max-width: 1000px) {
+    /* Header  */
+    .nav-bar{
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav-list{
+      flex-direction: column;  
+      justify-content: space-around;
+      
+    
+    }
+    .nav-bar{
+        margin: 0 ;
+        justify-content: unset;
+
+    }
+    .nav-title{
+        color: yellow;
+        text-align: center;
+        font-size: 2rem;
+        
+        
+    
+    }
+    .nav-item{
+        font-size: 2rem;
+        padding:0 ;
+        margin: .5rem 0;
+    }
+    .nav-link{
+        color: rgb(3, 180, 180);
+        font-size: 2rem;
+    }
+    .nav-link:hover{
+       color: yellow;
+       text-decoration:  underline  white  ;
+    
+    }
+    .nav-link:visited{
+        
+        text-decoration:  underline gray  ;
+
+     
+     }
+    /* /header */
+/* ******************************* */
+
+/* Slider */
+.header-slider{
+    height: 40vh;  
+    width: 100%;
+    position: relative;
+ 
+}
+
+/* /slider */
+
+/* **************************** */
+/* About */
+.about{
+    width: 100%;
+      
+}
+.about-desc{
+    width: 90% ;
+  ;
+
+}
+/* /about */
+/* ***************** */
+  /* Contact */
+  .contact-list{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-inline-start: 10px;
+
+
+}
+.contact-item>i{
+   
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+}
+.contact-item>span{
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    
+}
+  /* /contact */
+/* ******************************* */
+      /* Footer  */
+      footer{
+        width: 100%;
+          flex-direction: column;
+      }
+      .footer-list{
+      flex-direction: column;
+      
+    }
+      .footer-item{
+        font-size: 4rem;
+        padding: 1rem 0;
+      }
+      .footer-text{
+       text-align: center;
+    }
+    /* /Footer */
 }
