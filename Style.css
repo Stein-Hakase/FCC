@@ -13,6 +13,7 @@ body{
 
 }
 .nav-bar{
+    height: 13vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,6 +39,7 @@ body{
     font-size: 1.2rem;
 }
 .nav-link:hover{
+   
    color: white;
    text-decoration:  underline  rgb(3, 180, 180)  ;
 
@@ -252,8 +254,12 @@ footer{
 @media only screen and (max-width: 1000px) {
     /* Header  */
     .nav-bar{
+        height: unset;
         width: 100%;
         flex-direction: column;
+        margin: 0 ;
+        justify-content: unset;
+
     }
     .nav-list{
       flex-direction: column;  
@@ -261,11 +267,7 @@ footer{
       
     
     }
-    .nav-bar{
-        margin: 0 ;
-        justify-content: unset;
-
-    }
+  
     .nav-title{
         color: yellow;
         text-align: center;
