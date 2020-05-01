@@ -107,6 +107,9 @@ body{
     text-align: center;
     
 }
+.slider-btn:hover{
+    color: yellow;
+}
 .slider-title{
     position: absolute;
     z-index: 100;
@@ -137,6 +140,9 @@ body{
     justify-content: center;
 
     padding: .5rem;
+}
+.ppbtn>a:hover{
+    color: yellow;
 }
 /* About me section here */
 
@@ -329,6 +335,15 @@ footer{
     width: 100%;
     position: relative;
  
+}
+.pp-btn{
+    
+    font-size: 1rem;
+
+
+}
+.ppbtn{
+    padding: .5;
 }
 
 /* /slider */
