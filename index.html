@@ -40,14 +40,14 @@
                         <div class="slider-img"><img src="./images/2109958.jpg" alt="" class="img"></div>
                     </div>
                     <div class="btns">
-                        <a class="slider-btn" id="sliderBtn" onclick=nextSlide(-1) style="cursor: pointer;">&#10094;</a>
-                        <a class="slider-btn" id="sliderBtn" onclick=nextSlide(+1) style="cursor: pointer;">&#10095;</a>
+                        <a class="slider-btn" id="sliderBtn" onclick=nextSlide(-1,true) style="cursor: pointer;">&#10094;</a>
+                        <a class="slider-btn" id="sliderBtn" onclick=nextSlide(+1,true) style="cursor: pointer;">&#10095;</a>
                     </div>
                     <div class="pp-btn">
                             <div class="ppbtn">
-                                <a   onclick=play() style="cursor: pointer;">&#9658;</a>
+                                <a id="play"  onclick=play() style="cursor: pointer;">&#9658;</a>
                                 <span>|</span>
-                                <a   onclick=stop() style="cursor: pointer;">&#10074;&#10074;</a>
+                                <a  id="stop"  onclick=stop() style="cursor: pointer;">&#10074;&#10074;</a>
         
                             </div>
                      </div>
@@ -127,8 +127,10 @@
         var l=track.length
         var index=0
         show(index)
-        function nextSlide(n) {
-           
+        function nextSlide(n,v) {
+            if(v){pause=true    
+         document.getElementById('play').style.color = "white"
+         document.getElementById('stop').style.color = "green"}
             index+= n
             if (index> 2) {index = 0}
             if (index < 0) {index= 2}
@@ -170,13 +172,17 @@ function handleKeyboardNav(e) {
      var pause=false
      playStop()
      function stop (){
+        document.getElementById('play').style.color = "white";
+        document.getElementById('stop').style.color = "green";
          pause=true
      }
      function play(){
          pause=false
+         document.getElementById('stop').style.color = "white";
+         document.getElementById('play').style.color = "green";
          playStop()
      }
-
+    
     </script>
 </body>
 </html>
